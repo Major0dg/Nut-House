@@ -7,7 +7,7 @@ function App() {
         {/* nav */}
         <div className="flex justify-between p-6 py-10">
           {/* logo */}
-          <h3 className="text-[20px] font-bold">Nut Heads</h3>
+          <h3 className="text-[20px] font-bold">Nut Houses</h3>
 
           {/* links */}
           <ul className="hidden md:flex space-x-10 text-[14px] font-normal">
@@ -24,7 +24,7 @@ function App() {
           <div className="text-center md:text-left mb-8 md:mb-0">
             <p className=" text-red-600"> Hello, Welcome To "Hut Head!" </p>
             <h1 className="text-black font-extrabold font-mono text-[24px] md:text-[40px] mb-4">
-              Begin Your Coding Adventure with "Hello World" <br />
+              Begin Your Coding Adventure with "Nut House" <br />
             </h1>
             <p className="text-[18px] font-normal">
               Learn the Basics of Programming in a Friendly Environment
