@@ -7,7 +7,7 @@ function App() {
         {/* nav */}
         <div className="flex justify-between p-6 py-10">
           {/* logo */}
-          <h3 className="text-[20px] font-bold">Nut Houses</h3>
+          <h3 className="text-[20px] font-bold">Nut House</h3>
 
           {/* links */}
           <ul className="hidden md:flex space-x-10 text-[14px] font-normal">
