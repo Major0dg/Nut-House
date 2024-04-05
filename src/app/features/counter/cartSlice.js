@@ -3,15 +3,18 @@ import {
   FETCH_CART_ITEMS_REQUEST,
   FETCH_CART_ITEMS_SUCCESS,
   FETCH_CART_ITEMS_FAILURE,
+  ADD_TO_CART_ITEMS,
 } from "../actions";
 
-const initialState = {
+const products = {
+  count: 0,
   items: [],
+  cartItems: [],
   loading: false,
   error: null,
 };
 
-const cartReducer = (state = initialState, action) => {
+const cartReducer = (state = products, action) => {
   switch (action.type) {
     case FETCH_CART_ITEMS_REQUEST:
       return {
@@ -31,6 +34,12 @@ const cartReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         error: action.payload,
+      };
+    case ADD_TO_CART_ITEMS:
+      return {
+        ...state,
+        cartItems: [...state.cartItems, action.payload],
+        count: state.count + 1,
       };
     default:
       return state;
