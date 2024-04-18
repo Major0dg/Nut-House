@@ -4,6 +4,7 @@ import {
   FETCH_CART_ITEMS_SUCCESS,
   FETCH_CART_ITEMS_FAILURE,
   ADD_TO_CART_ITEMS,
+  SUBTRACT_CART_ITEMS,
 } from "../actions";
 
 const products = {
@@ -41,6 +42,13 @@ const cartReducer = (state = products, action) => {
         cartItems: [...state.cartItems, action.payload],
         count: state.count + 1,
       };
+    case SUBTRACT_CART_ITEMS:
+      return {
+        ...state,
+        cartItems: state.cartItems.filter((item) => item.id !== action.payload),
+        count: state.count > 0 ? state.count - 1 : 0,
+      };
+
     default:
       return state;
   }

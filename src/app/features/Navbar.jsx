@@ -11,8 +11,9 @@ const Navbar = () => {
         {/* nav */}
         <div className="flex justify-between p-6 py-10">
           {/* logo */}
-          <h2 className="text-[20px] font-bold">Nut House</h2>
-
+          <Link to={"/"}>
+            <h2 className="text-[20px] font-bold">Nut House</h2>
+          </Link>
           {/* links */}
           <ul className="hidden md:flex space-x-10 text-[17px] font-normal mx-auto cursor-pointer">
             <Link to={"/"}>

@@ -1,11 +1,7 @@
 // ShoppingCart.js
 import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux";
-import { addToCart, fetchCartItems } from "../actions";
-
-const handleAddToCart = (id) => {
-  dispatch(deletePost(id));
-};
+import { addToCart, fetchCartItems, subtractFromCart } from "../actions";
 
 const Card = ({ item }) => {
   const dispatch = useDispatch();
@@ -13,6 +9,10 @@ const Card = ({ item }) => {
   const handleAdd = () => {
     console.log(item);
     dispatch(addToCart(item));
+  };
+  const handleSubtract = (itemId) => {
+    console.log(itemId);
+    dispatch(subtractFromCart(itemId));
   };
   return (
     <div className="mt-7 px-4 py-2 bor border-slate-700 border">
@@ -28,14 +28,14 @@ const Card = ({ item }) => {
         <p className="text-gray-900">Category: {item.category}</p>
         <button
           type="button"
-          onClick={handleAdd}
+          onClick={() => handleAdd(item)}
           className="bg-cyan-400 text-white p-2 py-1 mt-1 rounded-md"
         >
           +
         </button>{" "}
         <button
           type="button"
-          onClick={handleAdd}
+          onClick={() => handleSubtract(item.id)}
           className="bg-cyan-400 text-white font-bold p-2 py-1 mt-1 rounded-md"
         >
           -

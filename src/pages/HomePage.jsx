@@ -55,9 +55,11 @@ function HomePage() {
               </button>
             </Link>{" "}
             {""}
-            <button className="bg-slate-50 text-[14px] font-bold px-5 py-3 rounded-md border-2 border-green-600 mt-4 md:mt-0 md:ml-4">
-              Community
-            </button>
+            <Link to={"/community"}>
+              <button className="bg-slate-50 text-[14px] font-bold px-5 py-3 rounded-md border-2 border-green-600 mt-4 md:mt-0 md:ml-4">
+                Community
+              </button>
+            </Link>
           </div>
           {/* right */}
           <div className="text-center md:text-right">
