@@ -15,7 +15,7 @@ const Card = ({ item }) => {
     dispatch(subtractFromCart(itemId));
   };
   return (
-    <div className="mt-7 px-4 py-2 bor border-slate-700 border">
+    <div className="mt-7 px-4 py-2 border-slate-700 border">
       <img src={item.image} alt={item.title} className="w-64 h-auto" />
       <div className="card-content">
         <h3 className="text-xl font-semibold">{item.title}</h3>
